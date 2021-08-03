@@ -1,6 +1,6 @@
 # srt_sub_extract
 
-Extract srt subtitles from mkv videos with mkvextract, and name srts with mkv names.
+Extract srt subtitles from mkv videos with mkvextract, and name srts with mkv filenames.
 
 ## - mkvextract command in python style:
 **mkvextract** src_video_path **tracks** track_id:dst_srt_path [track_id_1:dst_srt_path_1 ...]
