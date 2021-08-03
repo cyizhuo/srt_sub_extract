@@ -1,6 +1,7 @@
 # srt_sub_extract
 
 Extract srt subtitles from mkv videos with mkvextract, and name srts with mkv filenames.
+
 No need for other python packages.
 
 ## - mkvextract command in python style:
@@ -11,5 +12,7 @@ No need for other python packages.
 
 ## - about mkvextract:
 Currently supported is the extraction of tracks, tags, attachments, chapters, CUE sheets, timestamps and cues.
+
+PS: mkxextract.exe is for windows system.
 
 Download other system version or see more about mkvextarct at https://mkvtoolnix.download/doc/mkvextract.html
