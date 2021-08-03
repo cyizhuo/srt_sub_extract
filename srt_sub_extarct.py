@@ -10,7 +10,7 @@ import os
 
 # setting
 video_dir = '.\Modern.Family'  # replace with your video dir pls
-track_id = 2  # replace with your specific tracj_id, default: video=0, audio=1, text(subtitle)=2.
+track_id = 2  # replace with your specific track_id, default: video=0, audio=1, text(subtitle)=2.
 
 
 # collact all mkv video paths
