@@ -1,5 +1,7 @@
 '''Extract srt subtitles from mkv videos with mkvextract, and name srts with mkv names.
-cmd: mkvextract source-filename tracks [options] TID1:dest-filename1 [TID2:dest-filename2 ...]
+
+cmd: mkvextract src_video_path tracks track_id:dst_srt_path [track_id_1:dst_srt_path_1 ...]
+
 see more about mkvextarct at https://mkvtoolnix.download/doc/mkvextract.html
 '''
 
@@ -17,7 +19,6 @@ for root, dirs, files in os.walk(video_dir):
     for file in files:
         if file.endswith('mkv'):
             src_video_paths.append(os.path.join(root, file))
-
 
 # extract srt subtitles via mkvextract
 for src_video_path in src_video_paths:
