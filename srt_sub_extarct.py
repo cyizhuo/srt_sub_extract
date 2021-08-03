@@ -8,17 +8,18 @@ import os
 
 # setting
 video_dir = '.\Modern.Family'  # replace with your video dir pls
+track_id = 2  # replace with your specific tracj_id, default: video=0, audio=1, text(subtitle)=2.
 
 
 # collact all mkv video paths
-video_paths = []
+src_video_paths = []
 for root, dirs, files in os.walk(video_dir):
     for file in files:
         if file.endswith('mkv'):
-            video_paths.append(os.path.join(root, file))
+            src_video_paths.append(os.path.join(root, file))
 
 
 # extract srt subtitles via mkvextract
-for video_path in video_paths:
-    track_id = 2  # replace with your specific tracj_id, default: video=0, audio=1, text(subtitle)=2.
-    os.system('mkvextract {} tracks {}:{}\n'.format(video_path, track_id, video_path.replace('.mkv', '.srt')))
+for src_video_path in src_video_paths:
+    dst_srt_path = src_video_path.replace('.mkv', '.srt')
+    os.system('mkvextract {} tracks {}:{}\n'.format(src_video_path, track_id, dst_srt_path))
